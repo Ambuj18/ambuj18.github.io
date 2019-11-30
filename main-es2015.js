@@ -30,7 +30,18 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Navbar using angular material -->\n<!-- Toolbar -->\n<mat-toolbar color=\"primary\" class=\"app-header\">\n  <div [hidden]=\"inside\"><a routerLink=\"home\" routerLinkActive=\"active\" class=\"positronx\">Home </a></div>\n<span flex></span>\n  <span class=\"nav-tool-items\">\n    <a mat-button routerLink=\"login\" routerLinkActive=\"active\" [hidden]=\"!inside\" id=\"Log\">Log in</a>\n    <a mat-button  routerLink=\"register\" routerLinkActive=\"active\" [hidden]=\"!inside\" id=\"reg\" >Register</a>\n  </span>\n</mat-toolbar>\n\n<div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h6 class=\"modal-title\" id=\"exampleModalLabel\">Notification </h6>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n          <span aria-hidden=\"true\">&times;</span>\n        </button>\n      </div>\n      <div class=\"modal-body mt-5 pt-5\" id = \"msg\" style=\"text-align:center\">\n      <p class=\"pt-3 mt-3\">  {{message}} </p>\n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\" (click)=\"route()\">OK</button>\n        <!-- <button type=\"button\" class=\"btn btn-primary\">ok</button> -->\n      </div>\n    </div>\n  </div>\n</div>\n<button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#exampleModal\" id=\"btn\" [hidden]='true'>\n  Launch demo modal\n</button>\n\n<router-outlet></router-outlet>\n"
+module.exports = "<!-- Navbar using angular material -->\n<!-- Toolbar -->\n<div class=\"mb-3 pb-5\">\n<mat-toolbar color=\"primary\" class=\"app-header \">\n  <div [hidden]=\"!inside\"><a routerLink=\"home\" routerLinkActive=\"active\" class=\"positronx\">Home </a></div>\n<span flex></span>\n  <span class=\"nav-tool-items\">\n    <a mat-button routerLink=\"login\" routerLinkActive=\"active\" [hidden]=\"inside\" id=\"Log\">Log in</a>\n    <a mat-button  routerLink=\"register\" routerLinkActive=\"active\" [hidden]=\"inside\" id=\"reg\" >Register</a>\n  </span>\n</mat-toolbar>\n\n<div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h6 class=\"modal-title\" id=\"exampleModalLabel\">Notification </h6>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n          <span aria-hidden=\"true\">&times;</span>\n        </button>\n      </div>\n      <div class=\"modal-body mt-5 pt-5\" id = \"msg\" style=\"text-align:center\">\n      <p class=\"pt-3 mt-3\">  {{message}} </p>\n<div>    <button type=\"button\" class=\"btn btn-secondary float-right\" id=\"call\" data-dismiss=\"modal\" (click)=\"route()\">OK</button></div>\n      </div>\n      <!-- <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\" (click)=\"route()\">OK</button>\n         <button type=\"button\" class=\"btn btn-primary\">ok</button>\n      </div> -->\n\n    </div>\n  </div>\n</div>\n<button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#exampleModal\" id=\"btn\" [hidden]='true'>\n  Launch demo modal\n</button>\n</div>\n<router-outlet></router-outlet>\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/components/dashboard/dashboard.component.html":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/components/dashboard/dashboard.component.html ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"wrapper bg-secondary\">\n    <div class=\"centerthis\">\n            <div class=\"card shadow-lg bg-light rounded\" style=\"width: auto;\">\n                    <div class=\"card-body\">\n                      <h5 class=\"card-title\">Aptitiude</h5>\n\n                      <h6 style=\"color:#2e2b2b69; font-size: larger\" >Score: 00</h6>\n                      <br>\n                      <!-- <a  class=\"btn btn-primary\" (click)=\"starttest(1)\">Start Test </a> -->\n                       <button type=\"button\" class=\"btn btn-primary\" (click)=\"starttest(1)\">Start Test</button>\n                    </div>\n                  </div>\n            <div class=\"card shadow-lg bg-light rounded\" style=\"width: auto\">\n                    <div class=\"card-body\">\n                      <h5 class=\"card-title\">English</h5>\n                      <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n                      <a href=\"#\" class=\"btn btn-primary\">Start Test </a>\n                    </div>\n                  </div>\n            <div class=\"card shadow-lg bg-light rounded\" style=\"width: auto;\">\n                    <div class=\"card-body\">\n                      <h5 class=\"card-title\">Reasoning</h5>\n                      <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n                      <a href=\"#\" class=\"btn btn-primary\">Start Test </a>\n                    </div>\n                  </div>\n            <div class=\"card shadow-lg bg-light rounded\" style=\"width: atuo;\">\n                    <div class=\"card-body\">\n                      <h5 class=\"card-title\">Programming</h5>\n                      <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n                      <a href=\"#\" class=\"btn btn-primary\">Start Test </a>\n                    </div>\n                  </div>\n    </div>\n\n\n</div>\n"
 
 /***/ }),
 
@@ -64,6 +75,17 @@ module.exports = "<div class=\"login-wrapper\" fxLayout=\"row\" fxLayoutAlign=\"
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"login-wrapper\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n    <mat-card class=\"box\">\n      <mat-card-header>\n        <mat-card-title>Register</mat-card-title>\n      </mat-card-header>\n\n      <form class=\"example-form\">\n\n        <mat-card-content>\n          <mat-form-field class=\"example-full-width\">\n            <input matInput placeholder=\"Username\" [(ngModel)] = \"username\"  [ngModelOptions]=\"{standalone: true}\">\n          </mat-form-field>\n\n          <mat-form-field class=\"example-full-width\">\n            <input matInput placeholder=\"Email\"  [ngModelOptions]=\"{standalone: true}\" [(ngModel)] = \"Email\">\n          </mat-form-field>\n\n          <mat-form-field class=\"example-full-width\">\n            <input matInput placeholder=\"Password\" type=\"password\"  [ngModelOptions]=\"{standalone: true}\" [(ngModel)] = \"password\">\n          </mat-form-field>\n\n          <!-- <mat-form-field class=\"example-full-width\">\n            <mat-label>Choose a role...</mat-label>\n            <mat-select [(value)]=\"selected\">\n              <mat-option [value]=\"roles\" *ngFor=\"let roles of Roles\">{{roles}}\n              </mat-option>\n            </mat-select>\n          </mat-form-field> -->\n\n        </mat-card-content>\n\n        <button mat-stroked-button color=\"accent\" class=\"btn-block\" (click)=\"fuck()\">Register</button>\n\n      </form>\n    </mat-card>\n  </div>\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/components/test-apti/test-apti.component.html":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/components/test-apti/test-apti.component.html ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n<div class=\"bg-secondary p-5 \">\n<div class=\"card m-5 \">\n  <div class=\"card-header \">Aptitute Test  <span class= \"text-danger float-right\">Timer :- 2:15</span>\n\n    <span class=\"pr-5 float-right\"><span class=\"text-info\"> Max Marks</span> : 100</span>\n  </div>\n  <div class=\"card-body\">\n    <h6 class=\"card-title mb-5\">Questions:-</h6>\n\n    <div class=\"mb-5\">\n  <p class=\"card-text \"> 1) Two pipes A and B can fill a tank in 15 minutes and 20 minutes respectively. Both the pipes are opened together but after 4 minutes, pipe A is turned off. What is the total time required to fill the tank?</p>\n\n<div class=\"pl-4 \">\n  <div class=\"form-check\">\n    <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios1\" value=\"option1\" checked>\n    <label class=\"form-check-label\" for=\"exampleRadios1\">\n      A.\n    10 min. 20 sec\n    </label>\n  </div>\n  <div class=\"form-check\">\n    <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios2\" value=\"option2\">\n    <label class=\"form-check-label\" for=\"exampleRadios2\">\n      B.\n11 min. 45 sec\n    </label>\n  </div>\n  <div class=\"form-check\">\n    <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios3\" value=\"option3\">\n    <label class=\"form-check-label\" for=\"exampleRadios2\">\n      C.\n  12 min. 30 sec\n    </label>\n  </div>\n  <div class=\"form-check\">\n    <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios3\" value=\"option3\">\n    <label class=\"form-check-label\" for=\"exampleRadios2\">\n      D.\n14 min. 40 sec\n    </label>\n  </div>\n</div>\n\n</div>\n<div class=\"mb-5\">\n\n<p class=\"card-text ml-2\">\n\n2) ..3, 7, 6, 5, 9, 3, 12, 1, 15, (....)</p>\n<div class=\"alert alert-info w-25 ml-3 pt-0\" style=\"height:25px!important;text-align:center\" role=\"alert\">\nInsert the missing number.\n</div>\n\n<div class=\"pl-4 \">\n<div class=\"form-check\">\n  <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios1\" value=\"option1\" checked>\n  <label class=\"form-check-label\" for=\"exampleRadios1\">\n    A.\n  18\n\n  </label>\n</div>\n<div class=\"form-check\">\n  <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios2\" value=\"option2\">\n  <label class=\"form-check-label\" for=\"exampleRadios2\">\n    B.\n13\n\n  </label>\n</div>\n<div class=\"form-check\">\n  <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios3\" value=\"option3\">\n  <label class=\"form-check-label\" for=\"exampleRadios2\">\n    C.\n-1\n\n  </label>\n</div>\n<div class=\"form-check\">\n  <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios3\" value=\"option3\">\n  <label class=\"form-check-label\" for=\"exampleRadios2\">\n    D.\n  3\n\n  </label>\n</div>\n</div>\n</div>\n\n<div class=\"mb-5\">\n<p class=\"card-text \"> 3)\nA box contains 2 white balls, 3 black balls and 4 red balls. In how many ways can 3 balls be drawn from the box, if at least one black ball is to be included in the draw?</p>\n\n<div class=\"pl-4 \">\n<div class=\"form-check\">\n<input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios1\" value=\"option1\" checked>\n<label class=\"form-check-label\" for=\"exampleRadios1\">\n  A.\n  32\n\n</label>\n</div>\n<div class=\"form-check\">\n<input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios2\" value=\"option2\">\n<label class=\"form-check-label\" for=\"exampleRadios2\">\n  B.\n48\n\n</label>\n</div>\n<div class=\"form-check\">\n<input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios3\" value=\"option3\">\n<label class=\"form-check-label\" for=\"exampleRadios2\">\n  C.\n64\n</label>\n</div>\n<div class=\"form-check\">\n<input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios3\" value=\"option3\">\n<label class=\"form-check-label\" for=\"exampleRadios2\">\n  D.\n  96\n\n</label>\n</div>\n</div>\n\n</div>\n\n<div class=\"mb-5\">\n<p class=\"card-text \"> 4)\nA 6% stock yields 8%. The market value of the stock is:</p>\n\n<div class=\"pl-4 \">\n<div class=\"form-check\">\n<input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios1\" value=\"option1\" checked>\n<label class=\"form-check-label\" for=\"exampleRadios1\">\n  A.\nRs. 48\n\n\n</label>\n</div>\n<div class=\"form-check\">\n<input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios2\" value=\"option2\">\n<label class=\"form-check-label\" for=\"exampleRadios2\">\n  C.\n  Rs. 96\n\n\n\n</label>\n</div>\n<div class=\"form-check\">\n<input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios3\" value=\"option3\">\n<label class=\"form-check-label\" for=\"exampleRadios2\">\n  C.\n64\n</label>\n</div>\n<div class=\"form-check\">\n<input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios3\" value=\"option3\">\n<label class=\"form-check-label\" for=\"exampleRadios2\">\n  D.\n  Rs. 133.33\n\n</label>\n</div>\n</div>\n\n</div>\n\n<div class=\"mb-5\">\n<p class=\"card-text \"> 5)\nA and B together can do a piece of work in 30 days. A having worked for 16 days, B finishes the remaining work alone in 44 days. In how many days shall B finish the whole work alone?</p>\n\n<div class=\"pl-4 \">\n<div class=\"form-check\">\n<input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios1\" value=\"option1\" checked>\n<label class=\"form-check-label\" for=\"exampleRadios1\">\n  A.\n30 days\n\n\n\n</label>\n</div>\n<div class=\"form-check\">\n<input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios2\" value=\"option2\">\n<label class=\"form-check-label\" for=\"exampleRadios2\">\n  B.\n  40 days\n\n\n\n</label>\n</div>\n<div class=\"form-check\">\n<input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios3\" value=\"option3\">\n<label class=\"form-check-label\" for=\"exampleRadios2\">\n  C.\n60 days\n\n</label>\n</div>\n<div class=\"form-check\">\n<input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios3\" value=\"option3\">\n<label class=\"form-check-label\" for=\"exampleRadios2\">\n  D.\n  70 days\n\n\n</label>\n</div>\n</div>\n\n</div>\n\n\n\n\n\n<a href=\"#\" class=\"btn btn-primary float-right\">Submit</a>\n\n  </div>\n</div>\n<div>\n"
 
 /***/ }),
 
@@ -153,6 +175,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_log_in_log_in_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/log-in/log-in.component */ "./src/app/components/log-in/log-in.component.ts");
 /* harmony import */ var _components_register_register_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/register/register.component */ "./src/app/components/register/register.component.ts");
 /* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
+/* harmony import */ var _components_test_apti_test_apti_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/test-apti/test-apti.component */ "./src/app/components/test-apti/test-apti.component.ts");
+/* harmony import */ var _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/dashboard/dashboard.component */ "./src/app/components/dashboard/dashboard.component.ts");
+
+
 
 
 
@@ -160,10 +186,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [
-    { path: '', pathMatch: 'full', redirectTo: 'home' },
+    { path: '', pathMatch: 'full', redirectTo: 'register' },
     { path: 'login', component: _components_log_in_log_in_component__WEBPACK_IMPORTED_MODULE_3__["LogInComponent"] },
     { path: 'register', component: _components_register_register_component__WEBPACK_IMPORTED_MODULE_4__["RegisterComponent"] },
-    { path: 'home', component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_5__["HomeComponent"] }
+    { path: 'home', component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_5__["HomeComponent"] },
+    { path: 'dashboard/testapti', component: _components_test_apti_test_apti_component__WEBPACK_IMPORTED_MODULE_6__["TestAptiComponent"] },
+    { path: 'dashboard', component: _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_7__["DashboardComponent"] }
 ];
 let AppRoutingModule = class AppRoutingModule {
 };
@@ -211,8 +239,9 @@ let AppComponent = class AppComponent {
     constructor(policyService, router) {
         this.policyService = policyService;
         this.router = router;
-        this.inside = 'false';
+        this.inside = false;
         this.message = '';
+        this.url = '/login';
         this.title = 'minimus';
     }
     ngOnInit() {
@@ -220,8 +249,8 @@ let AppComponent = class AppComponent {
             console.log(data);
         });
     }
-    route(router) {
-        this.router.navigateByUrl('/login');
+    route() {
+        this.router.navigateByUrl(this.url);
     }
 };
 AppComponent.ctorParameters = () => [
@@ -266,6 +295,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _components_test_apti_test_apti_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/test-apti/test-apti.component */ "./src/app/components/test-apti/test-apti.component.ts");
+/* harmony import */ var _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/dashboard/dashboard.component */ "./src/app/components/dashboard/dashboard.component.ts");
 
 
 
@@ -282,6 +313,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
 let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -290,7 +323,9 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
             _components_log_in_log_in_component__WEBPACK_IMPORTED_MODULE_5__["LogInComponent"],
             _components_register_register_component__WEBPACK_IMPORTED_MODULE_6__["RegisterComponent"],
-            _components_home_home_component__WEBPACK_IMPORTED_MODULE_13__["HomeComponent"]
+            _components_home_home_component__WEBPACK_IMPORTED_MODULE_13__["HomeComponent"],
+            _components_test_apti_test_apti_component__WEBPACK_IMPORTED_MODULE_15__["TestAptiComponent"],
+            _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_16__["DashboardComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -308,6 +343,64 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         schemas: [_angular_core__WEBPACK_IMPORTED_MODULE_2__["CUSTOM_ELEMENTS_SCHEMA"]]
     })
 ], AppModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/dashboard/dashboard.component.css":
+/*!**************************************************************!*\
+  !*** ./src/app/components/dashboard/dashboard.component.css ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".wrapper {\r\n    display: grid;\r\n    grid-template-columns: 1fr;\r\n    grid-template-rows: 100vh;\r\n    align-items: center;\r\n    justify-items: center; /* adjusted */\r\n  }\r\n\r\n  .centerthis{\r\n      margin-top: 70px;\r\n      display: inline-grid;\r\n      grid-template-rows: 200px 200px;\r\n      grid-template-columns: 400px 400px;\r\n      /* background-color: aquamarine; */\r\n      grid-gap: 20px;\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9kYXNoYm9hcmQvZGFzaGJvYXJkLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxhQUFhO0lBQ2IsMEJBQTBCO0lBQzFCLHlCQUF5QjtJQUN6QixtQkFBbUI7SUFDbkIscUJBQXFCLEVBQUUsYUFBYTtFQUN0Qzs7RUFFQTtNQUNJLGdCQUFnQjtNQUNoQixvQkFBb0I7TUFDcEIsK0JBQStCO01BQy9CLGtDQUFrQztNQUNsQyxrQ0FBa0M7TUFDbEMsY0FBYztFQUNsQiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLndyYXBwZXIge1xyXG4gICAgZGlzcGxheTogZ3JpZDtcclxuICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyO1xyXG4gICAgZ3JpZC10ZW1wbGF0ZS1yb3dzOiAxMDB2aDtcclxuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgICBqdXN0aWZ5LWl0ZW1zOiBjZW50ZXI7IC8qIGFkanVzdGVkICovXHJcbiAgfVxyXG5cclxuICAuY2VudGVydGhpc3tcclxuICAgICAgbWFyZ2luLXRvcDogNzBweDtcclxuICAgICAgZGlzcGxheTogaW5saW5lLWdyaWQ7XHJcbiAgICAgIGdyaWQtdGVtcGxhdGUtcm93czogMjAwcHggMjAwcHg7XHJcbiAgICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogNDAwcHggNDAwcHg7XHJcbiAgICAgIC8qIGJhY2tncm91bmQtY29sb3I6IGFxdWFtYXJpbmU7ICovXHJcbiAgICAgIGdyaWQtZ2FwOiAyMHB4O1xyXG4gIH0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/components/dashboard/dashboard.component.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/components/dashboard/dashboard.component.ts ***!
+  \*************************************************************/
+/*! exports provided: DashboardComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DashboardComponent", function() { return DashboardComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var src_app_app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/app.component */ "./src/app/app.component.ts");
+
+
+
+
+let DashboardComponent = class DashboardComponent {
+    //public id :any= '0'
+    constructor(router, app) {
+        this.app = app;
+    }
+    ngOnInit() {
+    }
+    starttest(id) {
+        this.app.url = "/dashboard/testapti";
+        this.app.route();
+    }
+};
+DashboardComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+    { type: src_app_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"] }
+];
+DashboardComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-dashboard',
+        template: __webpack_require__(/*! raw-loader!./dashboard.component.html */ "./node_modules/raw-loader/index.js!./src/app/components/dashboard/dashboard.component.html"),
+        styles: [__webpack_require__(/*! ./dashboard.component.css */ "./src/app/components/dashboard/dashboard.component.css")]
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], src_app_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]])
+], DashboardComponent);
 
 
 
@@ -407,6 +500,7 @@ let LogInComponent = class LogInComponent {
                     document.getElementById('msg').setAttribute("class", "text-success");
                     document.getElementById('btn').click();
                 }
+                this.app.url = "/dashboard";
             });
             if (this.success == false) {
                 this.app.message = 'Login unSuccessful check your credentials';
@@ -498,6 +592,49 @@ RegisterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     }),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_policy_service__WEBPACK_IMPORTED_MODULE_2__["PolicyService"], src_app_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]])
 ], RegisterComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/test-apti/test-apti.component.css":
+/*!**************************************************************!*\
+  !*** ./src/app/components/test-apti/test-apti.component.css ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvdGVzdC1hcHRpL3Rlc3QtYXB0aS5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/components/test-apti/test-apti.component.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/components/test-apti/test-apti.component.ts ***!
+  \*************************************************************/
+/*! exports provided: TestAptiComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TestAptiComponent", function() { return TestAptiComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let TestAptiComponent = class TestAptiComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+TestAptiComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-test-apti',
+        template: __webpack_require__(/*! raw-loader!./test-apti.component.html */ "./node_modules/raw-loader/index.js!./src/app/components/test-apti/test-apti.component.html"),
+        styles: [__webpack_require__(/*! ./test-apti.component.css */ "./src/app/components/test-apti/test-apti.component.css")]
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+], TestAptiComponent);
 
 
 
