@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Navbar using angular material -->\n<!-- Toolbar -->\n<mat-toolbar color=\"primary\" class=\"app-header\">\n  <div [hidden]=\"inside\"><a routerLink=\"home\" routerLinkActive=\"active\" class=\"positronx\">Home </a></div>\n<span flex></span>\n  <span class=\"nav-tool-items\">\n    <a mat-button routerLink=\"login\" routerLinkActive=\"active\" [hidden]=\"!inside\" id=\"Log\">Log in</a>\n    <a mat-button  routerLink=\"register\" routerLinkActive=\"active\" [hidden]=\"!inside\" id=\"reg\" >Register</a>\n  </span>\n</mat-toolbar>\n\n<router-outlet></router-outlet>\n"
+module.exports = "<!-- Navbar using angular material -->\n<!-- Toolbar -->\n<mat-toolbar color=\"primary\" class=\"app-header\">\n  <div [hidden]=\"inside\"><a routerLink=\"home\" routerLinkActive=\"active\" class=\"positronx\">Home </a></div>\n<span flex></span>\n  <span class=\"nav-tool-items\">\n    <a mat-button routerLink=\"login\" routerLinkActive=\"active\" [hidden]=\"!inside\" id=\"Log\">Log in</a>\n    <a mat-button  routerLink=\"register\" routerLinkActive=\"active\" [hidden]=\"!inside\" id=\"reg\" >Register</a>\n  </span>\n</mat-toolbar>\n\n<div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h6 class=\"modal-title\" id=\"exampleModalLabel\">Notification </h6>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n          <span aria-hidden=\"true\">&times;</span>\n        </button>\n      </div>\n      <div class=\"modal-body mt-5 pt-5\" id = \"msg\" style=\"text-align:center\">\n      <p class=\"pt-3 mt-3\">  {{message}} </p>\n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\" (click)=\"route()\">OK</button>\n        <!-- <button type=\"button\" class=\"btn btn-primary\">ok</button> -->\n      </div>\n    </div>\n  </div>\n</div>\n<button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#exampleModal\" id=\"btn\" [hidden]='true'>\n  Launch demo modal\n</button>\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -52,7 +52,7 @@ module.exports = "<p>home works!</p>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"login-wrapper\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n\n    <mat-card class=\"box\">\n      <mat-card-header>\n        <mat-card-title>Log in</mat-card-title>\n      </mat-card-header>\n  \n      <form class=\"example-form\">\n        <mat-card-content>\n          <mat-form-field class=\"example-full-width\">\n            <input matInput placeholder=\"Username\">\n          </mat-form-field>\n  \n          <mat-form-field class=\"example-full-width\">\n            <input matInput placeholder=\"Password\">\n          </mat-form-field>\n        </mat-card-content>\n        <button mat-stroked-button color=\"accent\" class=\"btn-block\">Log in</button>\n      </form>\n    </mat-card>\n  \n  </div>"
+module.exports = "<div class=\"login-wrapper\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n\n    <mat-card class=\"box\">\n      <mat-card-header>\n        <mat-card-title>Log in</mat-card-title>\n      </mat-card-header>\n\n      <form class=\"example-form\">\n        <mat-card-content>\n          <mat-form-field class=\"example-full-width\">\n            <input matInput placeholder=\"Username\" [(ngModel)] = \"username\"  [ngModelOptions]=\"{standalone: true}\">\n          </mat-form-field>\n\n          <mat-form-field class=\"example-full-width\">\n            <input matInput placeholder=\"Password\" [(ngModel)] = \"password\" type=\"password\"  [ngModelOptions]=\"{standalone: true}\">\n          </mat-form-field>\n        </mat-card-content>\n        <button mat-stroked-button color=\"accent\" class=\"btn-block\" (click)=\"fuck()\">Log in</button>\n      </form>\n    </mat-card>\n    \n  </div>\n"
 
 /***/ }),
 
@@ -63,7 +63,7 @@ module.exports = "<div class=\"login-wrapper\" fxLayout=\"row\" fxLayoutAlign=\"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"login-wrapper\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n    <mat-card class=\"box\">\n      <mat-card-header>\n        <mat-card-title>Register</mat-card-title>\n      </mat-card-header>\n\n      <form class=\"example-form\">\n\n        <mat-card-content>\n          <mat-form-field class=\"example-full-width\">\n            <input matInput placeholder=\"Username\">\n          </mat-form-field>\n\n          <mat-form-field class=\"example-full-width\">\n            <input matInput placeholder=\"Email\">\n          </mat-form-field>\n\n          <mat-form-field class=\"example-full-width\">\n            <input matInput placeholder=\"Password\">\n          </mat-form-field>\n\n          <!-- <mat-form-field class=\"example-full-width\">\n            <mat-label>Choose a role...</mat-label>\n            <mat-select [(value)]=\"selected\">\n              <mat-option [value]=\"roles\" *ngFor=\"let roles of Roles\">{{roles}}\n              </mat-option>\n            </mat-select>\n          </mat-form-field> -->\n\n        </mat-card-content>\n\n        <button mat-stroked-button color=\"accent\" class=\"btn-block\">Register</button>\n\n      </form>\n    </mat-card>\n  </div>\n"
+module.exports = "<div class=\"login-wrapper\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n    <mat-card class=\"box\">\n      <mat-card-header>\n        <mat-card-title>Register</mat-card-title>\n      </mat-card-header>\n\n      <form class=\"example-form\">\n\n        <mat-card-content>\n          <mat-form-field class=\"example-full-width\">\n            <input matInput placeholder=\"Username\" [(ngModel)] = \"username\"  [ngModelOptions]=\"{standalone: true}\">\n          </mat-form-field>\n\n          <mat-form-field class=\"example-full-width\">\n            <input matInput placeholder=\"Email\"  [ngModelOptions]=\"{standalone: true}\" [(ngModel)] = \"Email\">\n          </mat-form-field>\n\n          <mat-form-field class=\"example-full-width\">\n            <input matInput placeholder=\"Password\" type=\"password\"  [ngModelOptions]=\"{standalone: true}\" [(ngModel)] = \"password\">\n          </mat-form-field>\n\n          <!-- <mat-form-field class=\"example-full-width\">\n            <mat-label>Choose a role...</mat-label>\n            <mat-select [(value)]=\"selected\">\n              <mat-option [value]=\"roles\" *ngFor=\"let roles of Roles\">{{roles}}\n              </mat-option>\n            </mat-select>\n          </mat-form-field> -->\n\n        </mat-card-content>\n\n        <button mat-stroked-button color=\"accent\" class=\"btn-block\" (click)=\"fuck()\">Register</button>\n\n      </form>\n    </mat-card>\n  </div>\n"
 
 /***/ }),
 
@@ -202,13 +202,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _policy_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./policy.service */ "./src/app/policy.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
 
 
 
 let AppComponent = class AppComponent {
-    constructor(policyService) {
+    constructor(policyService, router) {
         this.policyService = policyService;
+        this.router = router;
         this.inside = 'false';
+        this.message = '';
         this.title = 'minimus';
     }
     ngOnInit() {
@@ -216,9 +220,13 @@ let AppComponent = class AppComponent {
             console.log(data);
         });
     }
+    route(router) {
+        this.router.navigateByUrl('/login');
+    }
 };
 AppComponent.ctorParameters = () => [
-    { type: _policy_service__WEBPACK_IMPORTED_MODULE_2__["PolicyService"] }
+    { type: _policy_service__WEBPACK_IMPORTED_MODULE_2__["PolicyService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
 ];
 AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -226,7 +234,7 @@ AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         template: __webpack_require__(/*! raw-loader!./app.component.html */ "./node_modules/raw-loader/index.js!./src/app/app.component.html"),
         styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_policy_service__WEBPACK_IMPORTED_MODULE_2__["PolicyService"]])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_policy_service__WEBPACK_IMPORTED_MODULE_2__["PolicyService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
 ], AppComponent);
 
 
@@ -371,20 +379,54 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LogInComponent", function() { return LogInComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var src_app_policy_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/policy.service */ "./src/app/policy.service.ts");
+/* harmony import */ var src_app_app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app//app.component */ "./src/app/app.component.ts");
+
+
 
 
 let LogInComponent = class LogInComponent {
-    constructor() { }
+    constructor(policyService, app) {
+        this.policyService = policyService;
+        this.app = app;
+        this.success = false;
+    }
     ngOnInit() {
     }
+    fuck() {
+        console.log('here');
+        this.policyService.getPolicies().subscribe((data) => {
+            console.log(data);
+            data.forEach(x => {
+                console.log(x);
+                if (x.username == this.username && x.Password == this.password) {
+                    this.success = true;
+                    console.log(this.success);
+                    this.app.inside = true;
+                    this.app.message = 'Login Successful';
+                    document.getElementById('msg').setAttribute("class", "text-success");
+                    document.getElementById('btn').click();
+                }
+            });
+            if (this.success == false) {
+                this.app.message = 'Login unSuccessful check your credentials';
+                document.getElementById('msg').setAttribute("class", "text-danger");
+                document.getElementById('btn').click();
+            }
+        });
+    }
 };
+LogInComponent.ctorParameters = () => [
+    { type: src_app_policy_service__WEBPACK_IMPORTED_MODULE_2__["PolicyService"] },
+    { type: src_app_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"] }
+];
 LogInComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-log-in',
         template: __webpack_require__(/*! raw-loader!./log-in.component.html */ "./node_modules/raw-loader/index.js!./src/app/components/log-in/log-in.component.html"),
         styles: [__webpack_require__(/*! ./log-in.component.css */ "./src/app/components/log-in/log-in.component.css")]
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_policy_service__WEBPACK_IMPORTED_MODULE_2__["PolicyService"], src_app_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]])
 ], LogInComponent);
 
 
@@ -414,22 +456,47 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegisterComponent", function() { return RegisterComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var src_app_policy_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/policy.service */ "./src/app/policy.service.ts");
+/* harmony import */ var src_app_app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app//app.component */ "./src/app/app.component.ts");
+
+
 
 
 let RegisterComponent = class RegisterComponent {
-    constructor() {
-        this.Roles = ['Admin', 'Author', 'Reader'];
+    constructor(policyService, app) {
+        this.policyService = policyService;
+        this.app = app;
     }
     ngOnInit() {
+        this.policyService.getPolicies().subscribe((data) => {
+            console.log(data);
+            this.recordlength = data.length + 1;
+        });
+    }
+    fuck() {
+        let policy;
+        this.createPolicy(policy = { 'id': this.recordlength, 'username': this.username, 'Password': this.password, 'ScoreM': 0, 'ScoreGK': 0, 'scoreEng': 0, 'scoreApti': 0 });
+    }
+    createPolicy(policy) {
+        this.policyService.createPolicy(policy).subscribe((ret) => {
+            console.log("Policy created: ", ret);
+            this.app.message = 'Successfully Registered !\n NOW MR.' + this.username + "  you can login with your credentials";
+            document.getElementById('msg').setAttribute("class", "text-success");
+            document.getElementById('btn').click();
+        });
     }
 };
+RegisterComponent.ctorParameters = () => [
+    { type: src_app_policy_service__WEBPACK_IMPORTED_MODULE_2__["PolicyService"] },
+    { type: src_app_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"] }
+];
 RegisterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-register',
         template: __webpack_require__(/*! raw-loader!./register.component.html */ "./node_modules/raw-loader/index.js!./src/app/components/register/register.component.html"),
         styles: [__webpack_require__(/*! ./register.component.css */ "./src/app/components/register/register.component.css")]
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_policy_service__WEBPACK_IMPORTED_MODULE_2__["PolicyService"], src_app_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]])
 ], RegisterComponent);
 
 
